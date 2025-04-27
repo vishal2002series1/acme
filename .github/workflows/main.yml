@@ -39,4 +39,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}/acme-churn-api:latest
+          tags: ghcr.io/${{ github.repository_owner }}/acme-churn-api:latest
