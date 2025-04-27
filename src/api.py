@@ -3,9 +3,15 @@ from pydantic import BaseModel
 import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder, StandardScaler
+import os
+
+# Get the directory where the current file (api.py) is located
+current_dir = os.path.dirname(os.path.abspath(__file__))
+# Construct the path to the model file
+MODEL_PATH = os.path.join(os.path.dirname(current_dir), 'models', 'churn_model.joblib')
 
 # Load the model
-MODEL_PATH = './models/churn_model.joblib'
+# MODEL_PATH = './models/churn_model.joblib'
 model = joblib.load(MODEL_PATH)
 
 # Define the API
